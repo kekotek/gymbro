@@ -1,7 +1,245 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ %lld de %@" : {
+      "comment" : "Long date, e.g. jueves 17 de septiembre",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$lld de %3$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
 
+    },
+    "%lld clases al mes" : {
+
+    },
+    "1 cupo libre" : {
+
+    },
+    "abr" : {
+
+    },
+    "abril" : {
+
+    },
+    "Agenda" : {
+
+    },
+    "ago" : {
+
+    },
+    "agosto" : {
+
+    },
+    "alumno" : {
+      "comment" : "Singular, lowercase, inside sentences"
+    },
+    "Alumnos" : {
+      "comment" : "Plural, used as tab and screen title"
+    },
+    "Clase %lld de %lld de la semana" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clase %1$lld de %2$lld de la semana"
+          }
+        }
+      }
+    },
+    "Compartido" : {
+
+    },
+    "Con 1 cupo" : {
+
+    },
+    "D" : {
+      "comment" : "Weekday letter for domingo"
+    },
+    "Día" : {
+
+    },
+    "dic" : {
+
+    },
+    "diciembre" : {
+
+    },
+    "dom" : {
+
+    },
+    "domingo" : {
+
+    },
+    "En %lld semanas" : {
+
+    },
+    "ene" : {
+
+    },
+    "enero" : {
+
+    },
+    "Esta semana" : {
+
+    },
+    "feb" : {
+
+    },
+    "febrero" : {
+
+    },
+    "Horario fijo: todos los %@ a las %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Horario fijo: todos los %1$@ a las %2$@"
+          }
+        }
+      }
+    },
+    "hoy" : {
+
+    },
+    "Hoy, %@" : {
+
+    },
+    "Individual" : {
+
+    },
+    "J" : {
+      "comment" : "Weekday letter for jueves"
+    },
+    "jue" : {
+
+    },
+    "jueves" : {
+
+    },
+    "jul" : {
+
+    },
+    "julio" : {
+
+    },
+    "jun" : {
+
+    },
+    "junio" : {
+
+    },
+    "L" : {
+      "comment" : "Weekday letter for lunes"
+    },
+    "lun" : {
+
+    },
+    "lunes" : {
+
+    },
+    "M" : {
+      "comment" : "Weekday letter for martes"
+    },
+    "mar" : {
+
+    },
+    "martes" : {
+
+    },
+    "marzo" : {
+
+    },
+    "may" : {
+
+    },
+    "mayo" : {
+
+    },
+    "mié" : {
+
+    },
+    "miércoles" : {
+
+    },
+    "Movida desde %@" : {
+
+    },
+    "nov" : {
+
+    },
+    "noviembre" : {
+
+    },
+    "oct" : {
+
+    },
+    "octubre" : {
+
+    },
+    "Plan compartido" : {
+
+    },
+    "Plan individual" : {
+
+    },
+    "Próxima semana" : {
+
+    },
+    "S" : {
+      "comment" : "Weekday letter for sábado"
+    },
+    "sáb" : {
+
+    },
+    "sábado" : {
+
+    },
+    "Semana" : {
+
+    },
+    "sep" : {
+
+    },
+    "septiembre" : {
+
+    },
+    "Sin plan" : {
+
+    },
+    "Sin rutina" : {
+
+    },
+    "V" : {
+      "comment" : "Weekday letter for viernes"
+    },
+    "Vence %@" : {
+
+    },
+    "vie" : {
+
+    },
+    "viernes" : {
+
+    },
+    "X" : {
+      "comment" : "Weekday letter for miércoles"
+    }
   },
   "version" : "1.0"
 }

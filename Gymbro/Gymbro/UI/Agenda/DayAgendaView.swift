@@ -22,34 +22,40 @@ struct DayAgendaView: View {
                 .padding(.horizontal, 8)
             ScrollViewReader { proxy in
                 ScrollView(showsIndicators: false) {
-                    ZStack(alignment: .topLeading) {
+                    VStack(spacing: 0) {
                         ForEach(hours, id: \.self) { hour in
                             hourRow(hour)
                         }
-                        ForEach(groups) { group in
-                            let minute = calendar.minuteOfDay(of: group.startsAt)
-                            if minute % 60 != 0 {
-                                timeLabel(DateText.timeOfDay(minute), color: Theme.textPrimary)
-                                    .padding(.top, y(minute: minute))
+                    }
+                    .overlay(alignment: .top) {
+                        ZStack(alignment: .top) {
+                            ForEach(groups) { group in
+                                let minute = calendar.minuteOfDay(of: group.startsAt)
+                                if minute % 60 != 0 {
+                                    timeLabel(DateText.timeOfDay(minute), color: Theme.textPrimary)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding(.top, y(minute: minute))
+                                }
+                                NavigationLink(value: group.sessions[0]) {
+                                    DaySessionCard(group: group, now: now, calendar: calendar)
+                                }
+                                .buttonStyle(.plain)
+                                .frame(height: hourHeight - 8)
+                                .padding(.leading, gutter)
+                                .padding(.trailing, 16)
+                                .padding(.top, y(minute: minute) + 4)
                             }
-                            NavigationLink(value: group.sessions[0]) {
-                                DaySessionCard(group: group, now: now, calendar: calendar)
+                            if isToday {
+                                nowLine
                             }
-                            .buttonStyle(.plain)
-                            .frame(height: hourHeight - 8)
-                            .padding(.leading, gutter)
-                            .padding(.trailing, 16)
-                            .padding(.top, y(minute: minute) + 4)
-                        }
-                        if isToday {
-                            nowLine
                         }
                     }
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding(.top, 16)
                     .padding(.bottom, 96)
                 }
-                .onAppear {
+                .contentMargins(.top, 14, for: .scrollContent)
+                .task(id: selectedDate) {
+                    // Wait one runloop turn so the grid is laid out before scrolling.
+                    try? await Task.sleep(for: .milliseconds(80))
                     let target = isToday ? max(hours[0], calendar.component(.hour, from: now) - 1) : hours[0]
                     withAnimation(nil) { proxy.scrollTo(anchor(target), anchor: .top) }
                 }
@@ -63,8 +69,8 @@ struct DayAgendaView: View {
             timeLabel(DateText.timeOfDay(hour * 60), color: Theme.textPrimary)
             Rectangle().fill(Theme.line).frame(height: 1).padding(.trailing, 16)
         }
+        .frame(height: hour == hours.last ? 24 : hourHeight, alignment: .top)
         .id(anchor(hour))
-        .padding(.top, y(minute: hour * 60))
     }
 
     private func timeLabel(_ text: String, color: Color) -> some View {
