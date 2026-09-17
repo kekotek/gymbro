@@ -2,10 +2,9 @@
 //  GymbroApp.swift
 //  Gymbro
 //
-//  Created by Sergio Andres Barrientos Ochoa on 2026-09-17.
-//
 
 import SwiftUI
+import SwiftData
 
 @main
 struct GymbroApp: App {
@@ -13,5 +12,6 @@ struct GymbroApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: GymbroSchema.models)
     }
 }
