@@ -1,6 +1,12 @@
 import Foundation
 import SwiftData
 
+struct SlotAvailability: Identifiable {
+    var startsAt: Date
+    var result: PlacementResult
+    var id: Date { startsAt }
+}
+
 enum RescheduleScope {
     /// Only this class moves; the weekly slot and the other weeks stay as they are.
     case thisClassOnly
@@ -31,6 +37,25 @@ struct RescheduleService {
             hasActivePlan: period.contains(newStart)
         )
         return CapacityRule.evaluate(request, existing: bookings, ignoring: session.id, calendar: calendar)
+    }
+
+    /// Every possible start on `day`, evaluated for `session`, reading the day's bookings once.
+    func availability(for session: ClassSession, on day: Date) throws -> [SlotAvailability] {
+        guard let client = session.client, let period = session.planPeriod else {
+            throw SchedulingError.missingPlanPeriod
+        }
+        let dayStart = calendar.startOfDay(for: day)
+        let dayEnd = calendar.date(byAdding: .day, value: 1, to: dayStart)!
+        let bookings = try BookingRepository(context: context, calendar: calendar)
+            .bookings(overlapping: DateInterval(start: dayStart, end: dayEnd))
+        return GymSchedule.allStartMinutes.compactMap { minute in
+            guard let startsAt = calendar.date(day: dayStart, minuteOfDay: minute) else { return nil }
+            let request = PlacementRequest(
+                clientID: client.id, planType: session.planType, startsAt: startsAt, hasActivePlan: period.contains(startsAt)
+            )
+            let result = CapacityRule.evaluate(request, existing: bookings, ignoring: session.id, calendar: calendar)
+            return SlotAvailability(startsAt: startsAt, result: result)
+        }
     }
 
     func reschedule(_ session: ClassSession, to newStart: Date, scope: RescheduleScope) throws {

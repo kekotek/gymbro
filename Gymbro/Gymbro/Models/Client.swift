@@ -52,6 +52,17 @@ final class Client {
         planPeriods.max { $0.startDate < $1.startDate }
     }
 
+    /// The period to show in the profile: the active one, else the next one, else the latest.
+    func displayedPeriod(at now: Date) -> PlanPeriod? {
+        activePeriod(on: now) ?? planPeriods.filter { $0.startDate > now }.min { $0.startDate < $1.startDate } ?? latestPeriod
+    }
+
+    /// True when the client has no period ending after `days` days from `now` ("Por renovar").
+    func needsRenewal(at now: Date, within days: Int = 7, calendar: Calendar = .gymbro()) -> Bool {
+        guard let latest = latestPeriod, let horizon = calendar.date(byAdding: .day, value: days, to: now) else { return true }
+        return latest.endDate <= horizon
+    }
+
     var sortedWeeklySlots: [WeeklySlot] {
         weeklySlots.sorted { $0.order < $1.order }
     }

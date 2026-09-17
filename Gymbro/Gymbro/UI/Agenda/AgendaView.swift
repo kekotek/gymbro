@@ -10,10 +10,12 @@ enum AgendaMode: Hashable {
 struct AgendaView: View {
     @State private var mode: AgendaMode = LaunchOptions.initialAgendaMode
     @State private var selectedDate = Date.now
+    @State private var path = NavigationPath()
+    @Environment(\.modelContext) private var modelContext
     private let calendar = Calendar.gymbro()
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             TimelineView(.periodic(from: .now, by: 60)) { context in
                 content(now: context.date)
             }
@@ -21,7 +23,21 @@ struct AgendaView: View {
             .navigationDestination(for: ClassSession.self) { session in
                 ClassDetailView(session: session)
             }
+            .navigationDestination(for: Client.self) { client in
+                ClientProfileView(client: client, backTitle: String(localized: "Clase"))
+            }
             .toolbar(.hidden, for: .navigationBar)
+            .onAppear(perform: openClassFromLaunchOptions)
+        }
+    }
+
+    private func openClassFromLaunchOptions() {
+        guard path.isEmpty, let time = LaunchOptions.openClassTime else { return }
+        let parts = time.split(separator: ":").compactMap { Int($0) }
+        guard parts.count == 2, let start = calendar.date(day: .now, minuteOfDay: parts[0] * 60 + parts[1]) else { return }
+        let predicate = #Predicate<ClassSession> { $0.startsAt == start }
+        if let session = try? modelContext.fetch(FetchDescriptor(predicate: predicate)).first {
+            path.append(session)
         }
     }
 

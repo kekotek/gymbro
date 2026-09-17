@@ -46,6 +46,11 @@ nonisolated extension Calendar {
         return date(bySettingHour: minuteOfDay / 60, minute: minuteOfDay % 60, second: 0, of: day)
     }
 
+    /// The instant at `minuteOfDay` on the same day as `day`.
+    func date(day: Date, minuteOfDay: Int) -> Date? {
+        date(bySettingHour: minuteOfDay / 60, minute: minuteOfDay % 60, second: 0, of: startOfDay(for: day))
+    }
+
     /// End of a class that starts at `startsAt`.
     func sessionEnd(startingAt startsAt: Date) -> Date {
         date(byAdding: .minute, value: GymSchedule.sessionDurationMinutes, to: startsAt)!

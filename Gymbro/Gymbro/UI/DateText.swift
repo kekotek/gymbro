@@ -36,6 +36,24 @@ enum DateText {
         .sunday: String(localized: "domingo"),
     ]
 
+    /// "los jueves", "los sábados"
+    static func weekdayPlural(_ weekday: Weekday) -> String {
+        switch weekday {
+        case .saturday: return String(localized: "sábados")
+        case .sunday: return String(localized: "domingos")
+        default: return longWeekdays[weekday] ?? ""
+        }
+    }
+
+    /// "12 mar 1994"
+    static func fullDate(_ date: Date, calendar: Calendar) -> String {
+        "\(dayAndMonth(date, calendar: calendar)) \(calendar.component(.year, from: date))"
+    }
+
+    static func decimal(_ value: Double, fractionDigits: Int = 1) -> String {
+        value.formatted(.number.precision(.fractionLength(fractionDigits)).locale(Locale(identifier: "es_CL")))
+    }
+
     static func day(_ date: Date, calendar: Calendar) -> Int {
         calendar.component(.day, from: date)
     }
@@ -74,6 +92,11 @@ enum DateText {
     /// "mié 16"
     static func shortDay(_ date: Date, calendar: Calendar) -> String {
         "\(shortWeekdays[calendar.weekday(of: date)] ?? "") \(day(date, calendar: calendar))"
+    }
+
+    /// "dom 11 oct"
+    static func shortDayMonth(_ date: Date, calendar: Calendar) -> String {
+        "\(shortDay(date, calendar: calendar)) \(shortMonth(date, calendar: calendar))"
     }
 
     /// "09:00"
