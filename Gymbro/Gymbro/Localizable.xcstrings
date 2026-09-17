@@ -1,6 +1,25 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
+    "¿Cancelar esta clase?" : {
+
+    },
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · la rutina se mueve con la clase" : {
+
+    },
     "%@ %@" : {
       "localizations" : {
         "en" : {
@@ -22,10 +41,42 @@
         }
       }
     },
+    "%@ pasa a los %@ a las %@, y se mueven las clases siguientes de este período." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pasa a los %2$@ a las %3$@, y se mueven las clases siguientes de este período."
+          }
+        }
+      }
+    },
     "%lld" : {
 
     },
+    "%lld años · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld años · %2$@"
+          }
+        }
+      }
+    },
+    "%lld clases" : {
+
+    },
     "%lld clases al mes" : {
+
+    },
+    "%lld no es una cantidad válida de clases" : {
+
+    },
+    "%lld por sem." : {
+
+    },
+    "0,0" : {
 
     },
     "1 cupo libre" : {
@@ -46,11 +97,54 @@
     "agosto" : {
 
     },
+    "Agregar" : {
+
+    },
+    "Agregar %@" : {
+
+    },
+    "Agregar horario" : {
+
+    },
+    "Al renovar se agendan %lld clases entre el %@ y el %@: %lld por semana durante %lld semanas." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Al renovar se agendan %1$lld clases entre el %2$@ y el %3$@: %4$lld por semana durante %5$lld semanas."
+          }
+        }
+      }
+    },
     "alumno" : {
       "comment" : "Singular, lowercase, inside sentences"
     },
     "Alumnos" : {
       "comment" : "Plural, used as tab and screen title"
+    },
+    "Atención" : {
+
+    },
+    "Buscar por nombre" : {
+
+    },
+    "c/ %@" : {
+
+    },
+    "Cambia su horario fijo y se mueven las clases siguientes de este período." : {
+
+    },
+    "Cambiar" : {
+
+    },
+    "Cancelar" : {
+
+    },
+    "Cancelar clase" : {
+
+    },
+    "Clase" : {
+
     },
     "Clase %lld de %lld de la semana" : {
       "localizations" : {
@@ -62,7 +156,25 @@
         }
       }
     },
+    "Clase adicional" : {
+
+    },
+    "Clase cancelada" : {
+
+    },
+    "Clases del mes" : {
+
+    },
+    "Comparte con %@" : {
+
+    },
+    "Compartida sin cupo" : {
+
+    },
     "Compartido" : {
+
+    },
+    "Compartirá la hora con %@" : {
 
     },
     "Con 1 cupo" : {
@@ -70,6 +182,9 @@
     },
     "D" : {
       "comment" : "Weekday letter for domingo"
+    },
+    "De aquí en adelante" : {
+
     },
     "Día" : {
 
@@ -86,6 +201,43 @@
     "domingo" : {
 
     },
+    "domingos" : {
+
+    },
+    "Editar" : {
+
+    },
+    "Editar %@" : {
+
+    },
+    "El alumno no tiene plan vigente" : {
+
+    },
+    "El horario se guardó, pero las clases ya agendadas no se movieron:\n" : {
+
+    },
+    "El tipo se confirma en cada renovación." : {
+
+    },
+    "Elige día y hora" : {
+
+    },
+    "elige una hora" : {
+
+    },
+    "Eliminar horario" : {
+
+    },
+    "Empieza el %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Empieza el %1$@ · %2$@"
+          }
+        }
+      }
+    },
     "En %lld semanas" : {
 
     },
@@ -93,6 +245,12 @@
 
     },
     "enero" : {
+
+    },
+    "Ese día no se atiende" : {
+
+    },
+    "Esta clase ya no está pendiente" : {
 
     },
     "Esta semana" : {
@@ -103,6 +261,46 @@
     },
     "febrero" : {
 
+    },
+    "Fecha" : {
+
+    },
+    "Fuera del horario del gimnasio" : {
+
+    },
+    "Grasa" : {
+
+    },
+    "Grasa (%)" : {
+
+    },
+    "Guardar" : {
+
+    },
+    "Hora" : {
+
+    },
+    "Hora compartida completa" : {
+
+    },
+    "Hora de inicio" : {
+
+    },
+    "Hora ocupada" : {
+
+    },
+    "Horario fijo" : {
+
+    },
+    "Horario fijo inválido: %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Horario fijo inválido: %1$@ %2$@"
+          }
+        }
+      }
     },
     "Horario fijo: todos los %@ a las %@" : {
       "localizations" : {
@@ -115,6 +313,9 @@
       }
     },
     "hoy" : {
+
+    },
+    "Hoy" : {
 
     },
     "Hoy, %@" : {
@@ -147,6 +348,18 @@
     "L" : {
       "comment" : "Weekday letter for lunes"
     },
+    "La clase se pierde y la hora queda libre." : {
+
+    },
+    "La fecha queda fuera del período del plan" : {
+
+    },
+    "La hora debe ser en punto o y media" : {
+
+    },
+    "Libre" : {
+
+    },
     "lun" : {
 
     },
@@ -156,7 +369,13 @@
     "M" : {
       "comment" : "Weekday letter for martes"
     },
+    "Mañana, %@" : {
+
+    },
     "mar" : {
+
+    },
+    "Marcar como realizada" : {
 
     },
     "martes" : {
@@ -177,7 +396,70 @@
     "miércoles" : {
 
     },
+    "Mover a %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mover a %1$@ · %2$@"
+          }
+        }
+      }
+    },
     "Movida desde %@" : {
+
+    },
+    "Movida desde %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Movida desde %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Músculo" : {
+
+    },
+    "Músculo (kg)" : {
+
+    },
+    "Nacimiento" : {
+
+    },
+    "Necesitas %lld horarios fijos y tienes %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Necesitas %1$lld horarios fijos y tienes %2$lld"
+          }
+        }
+      }
+    },
+    "No hay %@ con plan compartido vigente en esa fecha." : {
+
+    },
+    "No se guardó nada. Conflictos:\n" : {
+
+    },
+    "No se pudo agregar" : {
+
+    },
+    "No se pudo guardar" : {
+
+    },
+    "No se pudo mover" : {
+
+    },
+    "No se pudo renovar" : {
+
+    },
+    "Nombre" : {
+
+    },
+    "Nombre completo" : {
 
     },
     "nov" : {
@@ -186,19 +468,79 @@
     "noviembre" : {
 
     },
+    "Nueva medición" : {
+
+    },
+    "Nueva rutina" : {
+
+    },
+    "Nuevo %@" : {
+
+    },
+    "Nuevo horario" : {
+
+    },
     "oct" : {
 
     },
     "octubre" : {
 
     },
-    "Plan compartido" : {
+    "Ocupada" : {
 
     },
-    "Plan individual" : {
+    "Ocupada por un plan individual" : {
+
+    },
+    "OK" : {
+
+    },
+    "Para otro %@ con plan compartido" : {
+
+    },
+    "Pasada" : {
+
+    },
+    "Peso" : {
+
+    },
+    "Peso (kg)" : {
+
+    },
+    "Plan" : {
+
+    },
+    "Plan %@" : {
+
+    },
+    "Por renovar" : {
 
     },
     "Próxima semana" : {
+
+    },
+    "Reagendar" : {
+
+    },
+    "Reagendar clase" : {
+
+    },
+    "Realizada" : {
+
+    },
+    "Renovar" : {
+
+    },
+    "Renovar plan" : {
+
+    },
+    "Renovar y agendar %lld clases" : {
+
+    },
+    "Renueva para agendar sus clases" : {
+
+    },
+    "Rutina" : {
 
     },
     "S" : {
@@ -210,6 +552,22 @@
     "sábado" : {
 
     },
+    "sábados" : {
+
+    },
+    "Se cruza con una clase compartida" : {
+
+    },
+    "Se mueve solo la clase de %@. %@ no cambia." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Se mueve solo la clase de %1$@. %2$@ no cambia."
+          }
+        }
+      }
+    },
     "Semana" : {
 
     },
@@ -219,16 +577,63 @@
     "septiembre" : {
 
     },
+    "Sin mediciones todavía" : {
+
+    },
     "Sin plan" : {
+
+    },
+    "Sin plan vigente" : {
+
+    },
+    "Sin plan vigente en esa fecha" : {
+
+    },
+    "Sin resultados" : {
 
     },
     "Sin rutina" : {
 
     },
+    "Solo esta clase" : {
+
+    },
+    "Su horario fijo de los %@ a las %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Su horario fijo de los %1$@ a las %2$@"
+          }
+        }
+      }
+    },
+    "Su plan actual termina el %@" : {
+
+    },
+    "Tipo de plan" : {
+
+    },
+    "Todos" : {
+
+    },
     "V" : {
       "comment" : "Weekday letter for viernes"
     },
+    "van %lld de %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "van %1$lld de %2$lld"
+          }
+        }
+      }
+    },
     "Vence %@" : {
+
+    },
+    "Venció el %@" : {
 
     },
     "vie" : {
@@ -237,8 +642,14 @@
     "viernes" : {
 
     },
+    "Volver" : {
+
+    },
     "X" : {
       "comment" : "Weekday letter for miércoles"
+    },
+    "Ya tiene otra clase a esa hora" : {
+
     }
   },
   "version" : "1.0"

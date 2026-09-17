@@ -6,8 +6,19 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1EBE6204305C5C1500513919 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EBE6187305C3DC000513919 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EBE618E305C3DC000513919;
+			remoteInfo = Gymbro;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1EBE618F305C3DC000513919 /* Gymbro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gymbro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBE6200305C5C1500513919 /* GymbroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymbroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,20 @@
 			path = Gymbro;
 			sourceTree = "<group>";
 		};
+		1EBE6201305C5C1500513919 /* GymbroTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GymbroTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1EBE618C305C3DC000513919 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		1EBE61FD305C5C1500513919 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
 			);
@@ -31,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				1EBE6191305C3DC000513919 /* Gymbro */,
+				1EBE6201305C5C1500513919 /* GymbroTests */,
 				1EBE6190305C3DC000513919 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				1EBE618F305C3DC000513919 /* Gymbro.app */,
+				1EBE6200305C5C1500513919 /* GymbroTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +87,27 @@
 			productReference = 1EBE618F305C3DC000513919 /* Gymbro.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1EBE61FF305C5C1500513919 /* GymbroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EBE6206305C5C1500513919 /* Build configuration list for PBXNativeTarget "GymbroTests" */;
+			buildPhases = (
+				1EBE61FC305C5C1500513919 /* Sources */,
+				1EBE61FD305C5C1500513919 /* Frameworks */,
+				1EBE61FE305C5C1500513919 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EBE6205305C5C1500513919 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1EBE6201305C5C1500513919 /* GymbroTests */,
+			);
+			name = GymbroTests;
+			productName = GymbroTests;
+			productReference = 1EBE6200305C5C1500513919 /* GymbroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -76,6 +120,10 @@
 				TargetAttributes = {
 					1EBE618E305C3DC000513919 = {
 						CreatedOnToolsVersion = 27.0;
+					};
+					1EBE61FF305C5C1500513919 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 1EBE618E305C3DC000513919;
 					};
 				};
 			};
@@ -94,12 +142,18 @@
 			projectRoot = "";
 			targets = (
 				1EBE618E305C3DC000513919 /* Gymbro */,
+				1EBE61FF305C5C1500513919 /* GymbroTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1EBE618D305C3DC000513919 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		1EBE61FE305C5C1500513919 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -112,7 +166,20 @@
 			files = (
 			);
 		};
+		1EBE61FC305C5C1500513919 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EBE6205305C5C1500513919 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EBE618E305C3DC000513919 /* Gymbro */;
+			targetProxy = 1EBE6204305C5C1500513919 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1EBE6198305C3DC100513919 /* Debug configuration for PBXProject "Gymbro" */ = {
@@ -251,6 +318,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -283,6 +351,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,6 +366,50 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1EBE6207305C5C1500513919 /* Debug configuration for PBXNativeTarget "GymbroTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FTV6Y69ES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OutlierSpA.GymbroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymbro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gymbro";
+			};
+			name = Debug;
+		};
+		1EBE6208305C5C1500513919 /* Release configuration for PBXNativeTarget "GymbroTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FTV6Y69ES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = OutlierSpA.GymbroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gymbro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gymbro";
 			};
 			name = Release;
 		};
@@ -316,6 +429,14 @@
 			buildConfigurations = (
 				1EBE619B305C3DC100513919 /* Debug configuration for PBXNativeTarget "Gymbro" */,
 				1EBE619C305C3DC100513919 /* Release configuration for PBXNativeTarget "Gymbro" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		1EBE6206305C5C1500513919 /* Build configuration list for PBXNativeTarget "GymbroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBE6207305C5C1500513919 /* Debug configuration for PBXNativeTarget "GymbroTests" */,
+				1EBE6208305C5C1500513919 /* Release configuration for PBXNativeTarget "GymbroTests" */,
 			);
 			defaultConfigurationName = Release;
 		};
