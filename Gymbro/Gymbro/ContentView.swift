@@ -2,23 +2,33 @@
 //  ContentView.swift
 //  Gymbro
 //
-//  Created by Sergio Andres Barrientos Ochoa on 2026-09-17.
-//
 
 import SwiftUI
+import SwiftData
+
+enum MainTab: Hashable {
+    case agenda
+    case clients
+}
 
 struct ContentView: View {
+    @State private var selectedTab = LaunchOptions.initialTab
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            AgendaView()
+                .tabItem { Label(String(localized: "Agenda"), systemImage: "calendar") }
+                .tag(MainTab.agenda)
+            ClientListView()
+                .tabItem { Label(Terminology.clientsTitle, systemImage: "person.2") }
+                .tag(MainTab.clients)
         }
-        .padding()
+        .tint(Theme.lime)
+        .preferredColorScheme(.dark)
     }
 }
 
 #Preview {
     ContentView()
+        .modelContainer(for: GymbroSchema.models, inMemory: true)
 }
